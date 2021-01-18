@@ -10,3 +10,6 @@
   - import_role:
       name: geerlingguy.security
     tags: [security]
+  - import_role:
+      name: geerlingguy.docker
+    tags: [docker]
