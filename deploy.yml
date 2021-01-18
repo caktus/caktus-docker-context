@@ -1,0 +1,12 @@
+---
+- hosts: copelco_docker
+  become: yes
+  tasks:
+  - apt:
+      update_cache: yes
+  - import_role:
+      name: geerlingguy.github-users
+    tags: [users]
+  - import_role:
+      name: geerlingguy.security
+    tags: [security]

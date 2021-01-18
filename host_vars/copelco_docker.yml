@@ -1,0 +1,9 @@
+---
+
+# geerlingguy.github-users
+github_users:
+  - copelco
+
+# geerlingguy.security
+security_sudoers_passwordless: [copelco]
+security_autoupdate_enabled: false
