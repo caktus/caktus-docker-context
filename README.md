@@ -12,7 +12,14 @@ ansible-galaxy install -f -r requirements.yml -p roles/
 
 ```sh
 # setup
-ansible-playbook playbooks/deploy.yml
+ansible-playbook deploy.yml
+```
+
+## Docker Context
+
+```sh
+docker context create copelco-docker --docker "host=ssh://copelco@142.93.32.206"
+docker context use copelco-docker
 ```
 
 ## Update requirements
