@@ -14,6 +14,8 @@ vim inventory
 ```sh
 # initial run as root user (e.g. for Digital Ocean)
 ansible-playbook -u root -vv main.yml
+# subsequent runs
+ansible-playbook -vv main.yml
 ```
 
 ## Docker Context
