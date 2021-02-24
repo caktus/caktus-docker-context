@@ -1,4 +1,4 @@
-# copelco-docker
+# Configure remote host as docker context
 
 ## Setup
 
@@ -11,6 +11,7 @@ ansible-galaxy install -f -r requirements.yml -p roles/
 
 ```sh
 # setup
+cp config.yml.example config.yml
 ansible-playbook deploy.yml
 ```
 

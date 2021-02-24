@@ -2,3 +2,4 @@ roles/*
 .vault_pass
 .direnv
 .envrc
+config.yml
