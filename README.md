@@ -1,5 +1,10 @@
 # Configure remote host as docker context
 
+Ansible playbook to configure a remote host as a [docker
+context](https://docs.docker.com/engine/context/working-with-contexts/). You can
+use this to configure a remote x86 VM to build Docker images on an ARM-based M1
+Mac.
+
 ## Setup
 
 ```sh
