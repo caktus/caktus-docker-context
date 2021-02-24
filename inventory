@@ -1,1 +1,1 @@
-copelco_docker ansible_host=142.93.32.206
+docker_host ansible_host=docker.caktus-built.com

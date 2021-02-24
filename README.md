@@ -5,14 +5,15 @@
 ```sh
 pip install -U pip-tools ansible
 ansible-galaxy install -f -r requirements.yml -p roles/
+cp config.yml.example config.yml
+vim inventory
 ```
 
 ## Playbooks
 
 ```sh
-# setup
-cp config.yml.example config.yml
-ansible-playbook deploy.yml
+# initial run as root user (e.g. for Digital Ocean)
+ansible-playbook -u root -vv main.yml
 ```
 
 ## Docker Context

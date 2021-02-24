@@ -2,12 +2,10 @@
 - hosts: all
   become: yes
   pre_tasks:
-    - name: "include x86_64 config"
+    - name: "include config"
       include_vars: "{{ item }}"
       with_fileglob:
         - "{{ playbook_dir }}/config.yml"
-      tags: ['always']
-      when: ansible_architecture == "x86_64"
   tasks:
   - apt:
       update_cache: yes
