@@ -3,8 +3,7 @@
 ## Setup
 
 ```sh
-pip install -U pip-tools
-pip-sync requirements.txt
+pip install -U pip-tools ansible
 ansible-galaxy install -f -r requirements.yml -p roles/
 ```
 
@@ -20,11 +19,4 @@ ansible-playbook deploy.yml
 ```sh
 docker context create copelco-docker --docker "host=ssh://copelco@142.93.32.206"
 docker context use copelco-docker
-```
-
-## Update requirements
-
-```
-pip-compile --upgrade requirements.in
-pip-sync requirements.txt
 ```
