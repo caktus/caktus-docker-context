@@ -19,6 +19,6 @@ ansible-playbook -u root -vv main.yml
 ## Docker Context
 
 ```sh
-docker context create copelco-docker --docker "host=ssh://copelco@142.93.32.206"
-docker context use copelco-docker
+docker context create caktus-docker --docker "host=ssh://copelco@docker.caktus-built.com"
+docker context use caktus-docker
 ```
