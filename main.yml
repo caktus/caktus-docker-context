@@ -18,3 +18,15 @@
   - import_role:
       name: geerlingguy.docker
     tags: [docker]
+  # https://github.com/docker/compose/issues/7542
+  - name: Ensure SSH allows sufficient sessions
+    ansible.builtin.lineinfile:
+      path: /etc/ssh/sshd_config
+      regexp: '^MaxSessions '
+      line: MaxSessions 500
+    register: sshd_sessions
+  - name: restart ssh
+    service:
+      name: ssh
+      state: restarted
+    when: sshd_sessions.changed
